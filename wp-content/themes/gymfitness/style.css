@@ -99,7 +99,7 @@ img {
     .barra-navegacion{
         display: flex;
         justify-content: space-between;
-        
+    }   
 }
 
 .logo {
@@ -185,6 +185,42 @@ img {
 .menu-principal .current_page_item {
     border-bottom: 3px solid var(--colorPrimario);
 }
+
+/** Reescribir Estilos menu movil **/
+
+.slicknav_menu {
+    background-color: var(--grisOscuro);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .slicknav_menu {
+        display: none;
+    }
+}
+    
+.slicknav_btn {
+    background-color: var(--colorPrimario);
+    margin: 3rem 0;
+    padding: 1.5rem;
+}
+
+.slicknav_nav a {
+    font-size: 2.4rem;
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+}
+
+.slicknav_nav a:hover {
+    background: transparent;
+    color: var(--colorPrimario);
+}
+
+
+
+
 
 
 
