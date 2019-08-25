@@ -88,3 +88,143 @@ img {
     width: 95%;
     margin: 0 auto;
 }
+
+/** Header **/
+.site-header {
+    background-color: var(--grisOscuro);
+    padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+    .barra-navegacion{
+        display: flex;
+        justify-content: space-between;
+    }   
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+/** Menu principal **/
+
+.menu-principal {
+    display: none;
+}
+
+@media (min-width: 768px ) {
+    .menu-principal{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .menu-principal .menu {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .menu-principal li {
+        margin-right: 2rem;
+    }
+
+    .menu-principal li:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.menu-principal a {
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 2.2rem;
+    padding: .5rem 2rem;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .menu-principal a {
+        font-size: 2.6rem;
+        position:relative;
+        z-index: 1;
+    }
+
+    .menu-principal a:before,
+    .menu-principal a:after {
+        position: absolute;
+        left: 0;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 50%;
+        background-color: var(--colorPrimario);
+        z-index: -1;
+        transform: scaleX(0);
+        transition: transform .6s;
+    }
+    
+    .menu-principal a:before{
+        top: 0;
+        transform-origin: left;
+    }
+    
+    .menu-principal a:after {
+        top: 50%;
+        transform-origin: right;
+    }
+
+    .menu-principal a:hover::before {
+        transform: scaleX(1);
+    }
+    
+    .menu-principal a:hover::after {
+        transform: scaleX(1);
+    }
+}
+
+.menu-principal .current_page_item {
+    border-bottom: 3px solid var(--colorPrimario);
+}
+
+/** Reescribir Estilos menu movil **/
+
+.slicknav_menu {
+    background-color: var(--grisOscuro);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .slicknav_menu {
+        display: none;
+    }
+}
+    
+.slicknav_btn {
+    background-color: var(--colorPrimario);
+    margin: 3rem 0;
+    padding: 1.5rem;
+}
+
+.slicknav_nav a {
+    font-size: 2.4rem;
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+}
+
+.slicknav_nav a:hover {
+    background: transparent;
+    color: var(--colorPrimario);
+}
+
+
+
+
+
+
+
+
+
+
+
