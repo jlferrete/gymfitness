@@ -9,5 +9,21 @@
 <body>
 
 <header class="site-header">
-    <h1>Site header</h1>
+    <div class="contenedor">
+        <div class="barra-navegacion">
+            <div class="logo">
+                <img src="<?php echo get_template_directory_uri()?>/img/logo.svg" alt="Logo sitio" />
+            </div>
+            
+            <?php
+                $navbar_args = array(
+                    'theme_location' => 'menu-principal',
+                    'container' => 'nav',
+                    'container_class' => 'menu-principal'
+                );
+                wp_nav_menu($navbar_args);
+            ?>
+            
+        </div>
+    </div>
 </header>
