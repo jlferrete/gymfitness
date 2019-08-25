@@ -26,7 +26,65 @@
     --negro: #000000;
 }
 
+/* Snippet de Paul Irish */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* Now 10px = 1rem! */
+}
+
+body {
+    font-size: 16px; 
+    font-size: 1.6rem; 
+    line-height: 2; 
+    font-family: var(--fuenteSecundaria);
+  }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/** Headings **/
+
+h1, h2, h3, h4 {
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    line-height: 1.2;
+}
 
 h1 {
-    font-family: var(--fuentePrincipal);
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 4.8rem;
+}
+
+h3 {
+    font-size: 3.6rem;
+}
+
+h4 {
+    font-size: 2.4rem;
+}
+
+/** Globales **/
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
 }
