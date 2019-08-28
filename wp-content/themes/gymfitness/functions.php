@@ -1,5 +1,15 @@
 <?php
 
+//Cuando el tema es activado
+
+function gymfitness_setup() {
+
+    // Habilitar imagenes destacadas
+    add_theme_support('post-thumbnails');
+
+}
+add_action('after_setup_theme', 'gymfitness_setup');
+
 //   Creamos y añadimos el menu del navbar, añadir más utilizando la array
 function gymfitness_menus() {
     register_nav_menus(array(
@@ -27,4 +37,6 @@ function gymfitness_scripts_styles() {
 
 }
 add_action('wp_enqueue_scripts', 'gymfitness_scripts_styles');
+
+
 
