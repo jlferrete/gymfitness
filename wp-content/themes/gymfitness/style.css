@@ -260,6 +260,7 @@ hr {
     color: var(--negro);
     text-align: center;
     font-size: 2.4rem;
+    padding: 0 1rem;
 }
 
 .site-footer .menu-principal .current_page_item {
@@ -282,14 +283,14 @@ hr {
     font-family: var(--fuentePrincipal);
     font-size: 2.4rem;
     margin: 0;
-    margin: 2rem 0 0 0;
+    
 }
 
 @media (min-width: 768px) {
     .copyright {
         font-size: 2.4rem;
         margin: 0;
-        padding: 0.5rem 0 0 0;
+        
     }
     
 }
