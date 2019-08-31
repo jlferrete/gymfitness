@@ -13,7 +13,7 @@ function gymfitness_lista_clases() { ?>
     
             while( $clases->have_posts() ): $clases->the_post(); ?>
 
-            <li class="clase card">
+            <li class="clase card gradient">
                 <?php the_post_thumbnail('mediano'); ?>
                 <div class="contenido">
                     <a href="<?php the_permalink(); ?>">
