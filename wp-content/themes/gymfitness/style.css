@@ -325,3 +325,73 @@ hr {
 .no-sidebar .contenido-principal {
     flex: 0 1 800px;
 }
+
+/** Clases **/
+
+.lista-clases {
+    margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+    .lista-clases {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }    
+}
+
+
+/** Cards **/
+.card {
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .card {
+        flex: 0 0 calc(50% - 2rem);
+        position: relative;
+    }
+}
+
+
+.card img {
+    display: block;
+}
+
+.card .contenido {
+    padding: 3rem;
+}
+
+@media (min-width: 768px) {
+    .card .contenido {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: left;
+
+    }
+}
+
+.card .contenido h3 {
+    line-height:1;
+    color: var(--colorPrimario);
+}
+
+@media (min-width: 768px) {
+    .card .contenido h3 {
+        color: var(--blanco);
+    }
+}
+
+.card .contenido p {
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .card .contenido p {
+        color: var(--colorPrimario);
+    
+    }
+}
