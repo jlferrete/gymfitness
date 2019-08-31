@@ -260,6 +260,7 @@ hr {
     color: var(--negro);
     text-align: center;
     font-size: 2.4rem;
+    padding: 0 1rem;
 }
 
 .site-footer .menu-principal .current_page_item {
@@ -282,14 +283,14 @@ hr {
     font-family: var(--fuentePrincipal);
     font-size: 2.4rem;
     margin: 0;
-    margin: 2rem 0 0 0;
+    
 }
 
 @media (min-width: 768px) {
     .copyright {
         font-size: 2.4rem;
         margin: 0;
-        padding: 0.5rem 0 0 0;
+        
     }
     
 }
@@ -324,3 +325,143 @@ hr {
 .no-sidebar .contenido-principal {
     flex: 0 1 800px;
 }
+
+/** Single clases **/
+.informacion-clase {
+    font-weight: 700;
+    font-family: var(--fuenteSecundaria);
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+
+/** Clases **/
+
+.lista-clases {
+    margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+    .lista-clases {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }    
+}
+
+
+/** Cards **/
+
+@media (min-width: 768px) {
+    .gradient::after {
+
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+19,0.4+57,0.7+100 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 19%, rgba(0,0,0,0.4) 57%, rgba(0,0,0,0.7) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 19%,rgba(0,0,0,0.4) 57%,rgba(0,0,0,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 19%,rgba(0,0,0,0.4) 57%,rgba(0,0,0,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3000000',GradientType=0 ); /* IE6-9 */
+
+    
+    }
+}
+
+.card {
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .card {
+        flex: 0 0 calc(50% - 2rem);
+        position: relative;
+    }
+}
+
+.card img {
+    display: block;
+}
+
+.card .contenido {
+    padding: 3rem;
+}
+
+@media (min-width: 768px) {
+    .card .contenido {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: left;
+        z-index: 2;
+
+    }
+}
+
+.card .contenido h3 {
+    line-height:1;
+    color: var(--colorPrimario);
+}
+
+@media (min-width: 768px) {
+    .card .contenido h3 {
+        color: var(--blanco);
+    }
+}
+
+.card .contenido p {
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .card .contenido p {
+        color: var(--colorPrimario);
+    
+    }
+}
+
+/** Clases Sidebar **/
+.clase-sidebar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--grisClaro);
+}
+
+.clase-sidebar:last-of-type {
+    border-bottom: none;
+}
+
+.clase-sidebar .imagen {
+    flex: 0 0 30%;
+}
+
+.clase-sidebar .imagen img {
+    display: block;
+}
+.clase-sidebar .contenido-clase {
+    flex: 0 0 calc(70% - 2rem);
+}
+
+.clase-sidebar .contenido-clase h3 {
+    margin: 0;
+    font-size: 2.6rem;
+}
+
+.clase-sidebar .contenido-clase a {
+    color: var(--colorPrimario);
+}
+
+.clase-sidebar .contenido-clase p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
