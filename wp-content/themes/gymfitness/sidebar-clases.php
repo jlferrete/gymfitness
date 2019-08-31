@@ -1,5 +1,5 @@
 <aside class="sidebar">
     <?php
-        dynamic_sidebar( 'sidebar_1' )
+        dynamic_sidebar( 'sidebar_2' )
     ?>
 </aside>
