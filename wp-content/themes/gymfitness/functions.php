@@ -3,6 +3,7 @@
 /** Consultas reutilizables **/
 
 require get_template_directory() . '/inc/queries.php';
+require get_template_directory() . '/inc/shortcodes.php';
 
 //Cuando el tema es activado
 
@@ -45,6 +46,11 @@ function gymfitness_scripts_styles() {
     if( is_page('galeria') ) :
         wp_enqueue_style('lightboxCSS', get_template_directory_uri() . '/css/lightbox.min.css', array(), '2.11.1');
     endif;
+
+    if( is_page('contacto') ) :
+        wp_enqueue_style('leafletCSS', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.css', array(), '1.5.1');
+    endif;
+
     //Hoja de estilos principal
     wp_enqueue_style('style', get_stylesheet_uri(), array('normalize', 'googleFont'), '1.0.0');
 
@@ -55,6 +61,11 @@ function gymfitness_scripts_styles() {
     if( is_page('galeria') ) :
         wp_enqueue_script('lightboxJS', get_template_directory_uri() . '/js/lightbox.min.js', array('jquery'), '2.11.1', true);
     endif;
+    
+    if( is_page('contacto') ) :
+    wp_enqueue_script('leafletJS', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.js', array( ), '1.5.1', true);
+    endif;
+
 }
 add_action('wp_enqueue_scripts', 'gymfitness_scripts_styles');
 
