@@ -112,6 +112,30 @@ hr {
 }
 
 /** Header **/
+body.home .site-header {
+    padding-top: 2rem;
+    height: auto;
+    min-height: 70rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+    body.home .site-header {
+        height: 100vh;
+    }
+    .header-grid {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+    .header-grid .barra-navegacion {
+        grid-column: 1 / 5;
+    }
+}
+
 .site-header {
     background-color: var(--grisOscuro);
     padding: 2rem 0;
@@ -127,6 +151,25 @@ hr {
 .logo {
     display: flex;
     justify-content: center;
+}
+
+.tagline{
+    color: var(--blanco);
+    margin-top: 10rem;
+
+}
+
+@media (min-width: 768px) {
+    .tagline {
+        grid-row: 3 / 4;
+        grid-column: 2 / 4;
+        margin-top: 0;
+
+    }
+}
+
+.tagline p {
+    font-size: 2rem;
 }
 
 /** Menu principal **/
@@ -209,6 +252,10 @@ hr {
 }
 
 /** Reescribir Estilos menu movil **/
+
+body.home .slicknav_menu {
+    background-color: transparent;
+}
 
 .slicknav_menu {
     background-color: var(--grisOscuro);
