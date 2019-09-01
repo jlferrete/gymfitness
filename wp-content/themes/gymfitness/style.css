@@ -351,6 +351,21 @@ hr {
     }    
 }
 
+.listado-blog .card .contenido {
+    padding: 0 2rem 2rem 2rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .listado-blog .card .contenido {
+        text-align: left;
+    }
+}
+
+.listado-blog .card h3 {
+    margin: 0;
+}
+
 
 /** Cards **/
 
@@ -383,6 +398,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 .card:last-of-type {
     border: none;
 }
+
 @media (min-width: 768px) {
     .card {
         flex: 0 0 calc(50% - 2rem);
@@ -448,6 +464,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     display: flex;
     justify-content: center;
 }
+
 @media (min-width: 768px) {
     .post-categories {
         position: absolute;
