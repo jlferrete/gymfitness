@@ -656,3 +656,8 @@ span.wpcf7-mail-sent-ok {
     color: var(--blanco);
     text-align: center;
 }
+
+/** Mapa **/
+#mapa {
+    height: 350px;
+}
