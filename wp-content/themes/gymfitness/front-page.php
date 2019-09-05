@@ -15,9 +15,6 @@
             ?>
             <img src="<?php echo esc_attr($imagen); ?>" />
             <p><?php echo esc_html( $area1['area_texto'] ); ?>
-
-            
-
         </li>
         <li class="area">
             <?php 
@@ -45,6 +42,20 @@
         </li>
     </ul>
 </div>
+
+<section class="clases">
+    <div class="contenedor seccion">
+        <h2 class="text-center texto-primario">Nuestras Clases</h2>
+
+        <?php gymfitness_lista_clases(4); ?>
+
+        <div class="contenedor-boton">
+            <a href="<?php echo esc_url( get_permalink( get_page_by_title('Nuestras Clases') ) ); ?>" class="boton boton-primario">
+                Ver todas las clases
+            </a>
+        </div>
+    </div>
+</section>
 
 
 
