@@ -10,7 +10,9 @@
         <p class="text-center"><?php echo get_the_author_meta( 'description', $autor->data->ID ); ?></p>
 
         <ul class="listado-blog">
-            <?php get_template_part('template-parts/loop', 'blog'); ?>
-        </ul>
+            <?php while(have_posts()): the_post(); ?>
+                <?php get_template_part('template-parts/loop', 'blog'); ?>
+            <?php endwhile; ?>
+    
     </main>
 <?php get_footer(); ?>
