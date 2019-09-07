@@ -7,10 +7,10 @@
     <?php wp_head(); ?>
     
 </head>
-<body>
+<body <?php body_class(); ?>>
 
 <header class="site-header">
-    <div class="contenedor">
+    <div class="contenedor header-grid">
         <div class="barra-navegacion">
             <div class="logo">
                 <a href="<?php echo site_url('/') ?>">
@@ -27,6 +27,12 @@
                 wp_nav_menu($navbar_args);
             ?>
 
+        </div> <!--Barra de navegacion -->
+
+        <div class="tagline text-center">
+            <h1><?php the_field('encabezado_hero'); ?></h1>
+            <p><?php the_field('contenido_hero'); ?></p>
         </div>
+
     </div>
 </header>

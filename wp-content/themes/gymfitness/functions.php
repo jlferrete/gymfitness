@@ -51,6 +51,10 @@ function gymfitness_scripts_styles() {
         wp_enqueue_style('leafletCSS', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.css', array(), '1.5.1');
     endif;
 
+    if( is_page('inicio') ) :
+        wp_enqueue_style('bxSliderCSS', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css', array(), '4.2.12');
+    endif;
+
     //Hoja de estilos principal
     wp_enqueue_style('style', get_stylesheet_uri(), array('normalize', 'googleFont'), '1.0.0');
 
@@ -65,6 +69,10 @@ function gymfitness_scripts_styles() {
     if( is_page('contacto') ) :
     wp_enqueue_script('leafletJS', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.js', array( ), '1.5.1', true);
     endif;
+
+    if( is_page('inicio') ) :
+        wp_enqueue_script('bxSliderJS', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array('jquery'), '4.2.12', true);
+        endif;
 
 }
 add_action('wp_enqueue_scripts', 'gymfitness_scripts_styles');
@@ -92,3 +100,23 @@ function gymfitness_widgets() {
 }
 add_action( 'widgets_init', 'gymfitness_widgets' );
 
+//** Imagen Hero */
+function gymfitness_hero_image() {
+    
+    // obtener id pagina principal
+    $front_page_id = get_option('page_on_front');
+    // Obtener id imagen
+    $id_imagen = get_field('imagen_hero',  $front_page_id);
+    // Obtener la imagen
+    $imagen = wp_get_attachment_image_src($id_imagen, 'full')[0];
+    // Style CSS
+    wp_register_style('custom', false);
+    wp_enqueue_style('custom');
+    $imagen_destacada_css = "
+        body.home .site-header {
+            background-image: linear-gradient( rgba(0,0,0,0.75), rgba(0,0,0,0.75)  ), url($imagen) ;
+        }
+    ";
+    wp_add_inline_style('custom', $imagen_destacada_css);
+}
+add_action('init', 'gymfitness_hero_image');
