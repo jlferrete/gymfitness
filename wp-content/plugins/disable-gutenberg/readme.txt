@@ -10,8 +10,8 @@ Donate link: https://monzillamedia.com/donate.html
 Contributors: specialk
 Requires at least: 4.9
 Tested up to: 5.2
-Stable tag: 1.8.1
-Version: 1.8.1
+Stable tag: 1.9
+Version: 1.9
 Requires PHP: 5.6.20
 Text Domain: disable-gutenberg
 Domain Path: /languages
@@ -112,7 +112,7 @@ __If you like this plugin, please give it a [5-star rating](https://wordpress.or
 2. Configure the plugin settings as desired
 3. Enable theme switcher via settings or shortcode
 
-[More info on installing WP plugins](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins)
+[More info on installing WP plugins](https://codex.wordpress.org/Managing_Plugins#Installing_Plugins)
 
 
 **Settings**
@@ -289,6 +289,14 @@ Thank you to everyone for using Disable Gutenberg and for all the [awesome 5-sta
 
 Version 1.5 brings some great new features and improvements. Note that better Multisite support is being developed for a future release. If you have any feedback or suggestions to make this plugin the absolute best it can be, and/or would like to help with development, please reach me via my [contact form](https://perishablepress.com/contact/) at Perishable Press.
 
+
+**1.9 (2019/09/02)**
+
+* Updates check for existing Gutenberg plugin
+* Improves logic of `disable_gutenberg_remove()`
+* Updates hooks in `disable_gutenberg_hooks()`
+* Updates some links to https
+* Tests on WordPress 5.3 (alpha)
 
 **1.8.1 (2019/04/29)**
 
